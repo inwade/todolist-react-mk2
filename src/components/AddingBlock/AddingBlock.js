@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from "react";
 
-import './AddingBlock.css';
+import "./AddingBlock.css";
 
-function AddingBlock (props) {
+const AddingBlock = ({ handleAdd }) => {
+  const [inputValue, setInputValue] = useState("");
 
-    return (
-        <div className="adding-block">
-            <h3>Here you can add items to your list</h3>
-            <textarea id="textarea-main"></textarea>
-            <button onClick={props.handleAdd}>Add item</button>
-        </div>
-    )
-}
+  return (
+    <div className="adding-block">
+      <h3>Here you can add items to your list</h3>
+      <textarea
+        onChange={(e) => setInputValue(e.target.value)}
+        value={inputValue}
+      ></textarea>
+      <button onClick={() => handleAdd(inputValue)}>Add item</button>
+    </div>
+  );
+};
 
-export default AddingBlock
+export default AddingBlock;

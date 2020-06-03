@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import './TaskItem.css';
+import "./TaskItem.css";
 
-function TaskItem (props) {
-
-    return (
-        <li className="list-item" id={props.identifier} onDoubleClick={props.handleEdit}>
-            <p>{props.tasktext}</p>
-            <span onClick={props.handleDelete}> X </span>
-        </li>
-    )
+function TaskItem({ task, handleEdit, handleDelete }) {
+  return (
+    <li className="list-item" onDoubleClick={() => handleEdit(task)}>
+      {!task.edit ? (
+        <p>{task.value}</p>
+      ) : (
+        <input type="text" value={task.value} />
+      )}
+      <span onClick={handleDelete}> X </span>
+    </li>
+  );
 }
 
 export default TaskItem;
