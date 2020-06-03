@@ -1,0 +1,16 @@
+.tasklist-holder {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasklist-holder ul {
+    list-style: none;
+    width: 50%;
+}
