@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Header.css';
+import './HeaderTodo.css';
 
-function Header () {
+function HeaderTodo () {
 
     return (
         <div className="header-todo-holder">
@@ -12,4 +12,4 @@ function Header () {
     )
 }
 
-export default Header;
+export default HeaderTodo;
